@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EtudiantController;
+use App\Http\Controllers\CoursController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +37,15 @@ Route::get('/etudiant', function () {
 
 
 Route::post('/etudiant', [EtudiantController::class, 'etudianAction']);
+
+
+
+
+Route::get('/cours',function (){
+    return view('cours');
+});
+
+
+
+
+Route::post('/cours',[CoursController::class,"CoursAction",]);
