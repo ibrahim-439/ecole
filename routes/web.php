@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\EtudiantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,13 @@ Route::get('/contact', function () {
 
 
 Route::post('/contact', [ContactController::class, 'submitAction']);
+
+
+
+
+Route::get('/etudiant', function () {
+    return view('etudiant');
+});
+
+
+Route::post('/etudiant', [EtudiantController::class, 'etudianAction']);
